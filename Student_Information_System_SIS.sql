@@ -114,47 +114,6 @@ insert into Payments (payment_id, student_id, amount, payment_date) values
 (9, 9, 4127.13, '2024-04-21'),
 (10, 2, 3903.52, '2024-11-01');
 
--- Tasks 2: Select, Where, Between, AND, LIKE: 
-
--- 2.1 Write an SQL query to insert a new student into the "Students" table with the following details: 
-insert into Students (first_name, last_name, date_of_birth, email, phone_number) values 
-('John', 'Doe', '1995-08-15', 'john.doe@example.com', '1234567890');
-select * from Students;
-
--- 2.2 Write an SQL query to enroll a student in a course. Choose an existing student and course and insert a record into the "Enrollments" table with the enrollment date.
-insert into Enrollments (student_id, course_id, enrollment_date) values (3, 4, current_date());
-select * from Enrollments;
-
--- 2.3 Update the email address of a specific teacher in the "Teacher" table. Choose any teacher and  modify their email address.  
-update Teacher set email = 'ganesh.newemail@school.edu' where teacher_id = 2;
-select * from Teacher;
-
--- 2.4 Write an SQL query to delete a specific enrollment record from the "Enrollments" table. Select an enrollment record based on the student and course. 
-delete from Enrollments where student_id = 3 AND course_id = 4;
-select * from Enrollments;
-
--- 2.5 Update the "Courses" table to assign a specific teacher to a course. Choose any course and teacher from the respective tables.
-update Courses set teacher_id = 8 where course_id = 5;
-select * from Courses;
-
--- 
--- 2.6 Delete a specific student from the "Students" table and remove all their enrollment records from the "Enrollments" table. Be sure to maintain referential integrity. 
-delete from Payments where student_id = 3;
-select * from Payments;
-delete from Enrollments where student_id = 3;
-select * from Enrollments;
-delete from Students where student_id = 3;
-select * from Students;
-
--- 2.7 Update the payment amount for a specific payment record in the "Payments" table. Choose any payment record and modify the payment amount. 
-update Payments set amount = 4500.00 where payment_id = 3;
-select * from Payments;
-
-
-
--- Task 3. Aggregate functions, Having, Order By, GroupBy and Joins:  
-
--- 3.1 1. Write an SQL query to calculate the total payments made by a specific student. You will need to join the "Payments" table with the "Students" table based on the student's ID.
 
 
 
